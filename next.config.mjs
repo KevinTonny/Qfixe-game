@@ -1,6 +1,5 @@
 // @ts-check
 import withPlaiceholder from '@plaiceholder/next';
-require("./ngrok.config.js");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
