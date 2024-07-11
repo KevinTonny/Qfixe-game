@@ -19,7 +19,7 @@ const checkInViewIntersectionObserver = ({
       if (entry.isIntersecting) {
         //
         callback();
-        //  ---- IF TRUE WE WILL UNOBSERVER AND FALSE IS NO
+
         if (freezeOnceVisible) {
           observer.unobserve(entry.target);
         }
@@ -28,7 +28,7 @@ const checkInViewIntersectionObserver = ({
     });
   };
 
-  // _checkBrowserSupport-----
+
   if (typeof window.IntersectionObserver === "undefined") {
     console.error(
       "window.IntersectionObserver === undefined! => Your Browser is Notsupport"

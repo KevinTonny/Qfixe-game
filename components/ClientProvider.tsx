@@ -20,7 +20,6 @@ const ClientProvider = ({ children }: { children: React.ReactNode }) => {
     cartStore.persist.rehydrate();
   };
 
-  // cart will be refreshed on cart change  n browser
   useEffect(() => {
     document.addEventListener('visibilitychange', updateStore);
     window.addEventListener('focus', updateStore);

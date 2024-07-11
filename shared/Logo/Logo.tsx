@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-// import Link from "next/link";
 import React from "react";
 
 export interface LogoProps {
@@ -19,8 +18,6 @@ const Logo: React.FC<LogoProps> = ({
       href="/"
       className={`ttnc-logo inline-block text-slate-600 ${className}`}
     >
-      {/* THIS USE FOR MY CLIENT */}
-      {/* PLEASE UN COMMENT BELLOW CODE AND USE IT */}
       {img ? (
         <Image
           className={`block h-32 sm:h-32 w-auto ${

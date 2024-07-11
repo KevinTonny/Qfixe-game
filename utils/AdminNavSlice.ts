@@ -20,7 +20,6 @@ export const AdminNav = createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
 export const { setNavActive} = AdminNav.actions
 
 export const AdminNavReducer =  AdminNav.reducer
