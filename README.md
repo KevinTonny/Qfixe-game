@@ -13,5 +13,3 @@ Features:
 - Plaiceholder blurred images
 - PayPay integration (Stripe will be added soon) 
 - Server Side Pagination
-
-
