@@ -18,7 +18,7 @@ const Header = () => {
               href='/'
               className='ml-2 text-base font-semibold sm:ml-4 sm:text-lg'
             >
-              <Image src="/images/logo.webp" alt="logo" width={240} height={70} />
+              <Image src="/images/logo.webp" alt="logo" width={190} height={50} />
             </Link>
           </div>
           <Menu />
@@ -28,7 +28,7 @@ const Header = () => {
         </div></div>
         
       </nav>
-      <div className='mt-[136px] bg-base-300 border-t border-slate-300'>
+      <div className='mt-[111px] bg-base-300 border-t border-slate-300'>
         <ul className="flex justify-center gap-8 py-4">
           <li className="hover:text-green-400">
             <a href="/epic-games">Epic Games</a>
