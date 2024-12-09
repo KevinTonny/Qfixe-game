@@ -43,8 +43,6 @@ export const Admin = createSlice({
 
   },
 })
-
-// Action creators are generated for each case reducer function
 export const { setCategoryData ,setCatLoading , setProdLoading  , setProductData , setOrderData , setOrderLoading} = Admin.actions
 
 export const AdminReducer =  Admin.reducer

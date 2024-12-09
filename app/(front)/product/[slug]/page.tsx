@@ -42,12 +42,12 @@ const ProductPage = async ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <div className='my-2'>
+      <div className='my-8'>
         <div className='my-4'>
           <Link href='/' className='btn'>{`<- Back to Products`}</Link>
         </div>
         <div className='grid gap-4 md:grid-cols-4'>
-          <div className='relative aspect-square md:col-span-2'>
+          <div className='relative aspect-square md:col-span-2 p-8'>
             <Image
               src={product.image}
               alt={product.name}
@@ -56,13 +56,13 @@ const ProductPage = async ({ params }: { params: { slug: string } }) => {
               width={640}
               height={640}
               sizes='100vw'
-              className='h-full w-full object-contain'
+              className='h-full w-full object-cover'
             />
           </div>
-          <div>
+          <div className='relative aspect-square md:col-span-2 p-8'>
             <ul className='space-y-4'>
               <li>
-                <h1 className='text-xl'>{product.name}</h1>
+                <h1 className='text-3xl font-bold'>{product.name}</h1>
               </li>
               <li>
                 <Rating
@@ -71,22 +71,12 @@ const ProductPage = async ({ params }: { params: { slug: string } }) => {
                 />
               </li>
               <li>
-                <div className='divider'></div>
-              </li>
-              {/* <li>
-                <ReadMore>
-                <p>Description: {product.description}</p>
-                </ReadMore>
-                
+                <p className='text-xl font-semibold'>Category: {product.category}</p>
               </li>
               <li>
-                <ReadMore>
-                  <p>Requirement: {product.requirement}</p>
-                </ReadMore>
-              </li> */}
+                <div className='divider'></div>
+              </li>
             </ul>
-          </div>
-          <div>
             <div className='card mt-3 bg-base-300 shadow-xl md:mt-0'>
               <div className='card-body'>
                 <div className='flex justify-between'>
@@ -117,18 +107,18 @@ const ProductPage = async ({ params }: { params: { slug: string } }) => {
         </div>
       </div>
       <div className='other'>
-        <ul className='flex flex-row gap-4'>
+        <ul className='flex flex-row gap-8'>
           <li className='basis-1/2'>
-            <h1>Description</h1>
+            <h1 className='text-2xl font-bold'>Description</h1>
             <ReadMore>
-              <p>Description: {product.description}</p>
+              <p className=''>Description: {product.description}</p>
             </ReadMore>
             
             </li>
             <li className='basis-1/2'>
-              <h1>System Requirement</h1>
+              <h1 className='font-bold text-2xl'>System Requirement</h1>
               <ReadMore>
-                <p>Requirement: {product.requirement}</p>
+                <p className=''>Requirement: {product.requirement}</p>
               </ReadMore>
             </li>
         </ul>

@@ -35,7 +35,7 @@ export const config = {
       },
     }),
   ],
-  // custom pages for sign in and register
+
   pages: {
     signIn: '/signin',
     newUser: '/register',

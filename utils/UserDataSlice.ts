@@ -24,7 +24,7 @@ export const userSlice = createSlice({
   },
 })
 
-// Action creators are generated for each case reducer function
+
 export const { setUserData  , setUserToken } = userSlice.actions
 
 export const UserReducer =  userSlice.reducer

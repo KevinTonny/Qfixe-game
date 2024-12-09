@@ -2,7 +2,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getPlaiceholder } from 'plaiceholder';
 
+import AddToCart from '@/components/products/AddToCart';
 import { Product } from '@/lib/models/ProductModel';
+import { convertDocToObj } from '@/lib/utils';
 
 import { Rating } from './Rating';
 
@@ -40,6 +42,20 @@ const ProductItem = async ({ product }: { product: Product }) => {
         <Rating value={product.rating} caption={`(${product.name})`} isCard />
         <div className='card-actions flex items-center justify-between'>
           <span className='text-2xl'>${product.price}</span>
+        </div>
+        <div>
+          {product.countInStock !== 0 && (
+            <div className='card-actions justify-center'>
+              <AddToCart
+                item={{
+                  ...convertDocToObj(product),
+                  qty: 0,
+                  color: '',
+                  size: '',
+                }}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>

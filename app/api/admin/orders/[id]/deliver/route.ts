@@ -17,7 +17,6 @@ export const PUT = auth(async (...args: any) => {
 
     const order = await OrderModel.findById(params.id);
     if (order) {
-      // order must be paid to mark as delivered
       if (!order.isPaid)
         return Response.json(
           { message: 'Order is not paid' },

@@ -23,7 +23,6 @@ const Form = () => {
     clear,
   } = useCartService();
 
-  // mutate data in the backend by calling trigger function
   const { trigger: placeOrder, isMutating: isPlacing } = useSWRMutation(
     `/api/orders/mine`,
     async (url) => {
